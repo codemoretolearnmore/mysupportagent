@@ -8,7 +8,7 @@ from fastapi.responses import JSONResponse
 import os
 
 # Load config
-API_KEY = os.getenv("API_KEY", "")  
+api_key = os.getenv("API_KEY", "")  
 
 
 async def train_with_chatgpt(tickets, logger):
@@ -46,7 +46,7 @@ async def train_with_chatgpt(tickets, logger):
         """
             
             client = OpenAI(
-                api_key=config["API_KEY"],  # This is the default and can be omitted
+                api_key=api_key,  # This is the default and can be omitted
             )
             response = client.chat.completions.create(
                 messages=[{"role": "user", "content": prompt}],
