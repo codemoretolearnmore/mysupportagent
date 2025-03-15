@@ -14,7 +14,6 @@ pymongo
 uuid
 datetime
 bson
-pickle
 torchvision
 openai
 typing
