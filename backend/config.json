@@ -1,0 +1,6 @@
+{
+    "MONGO_URI": "mongodb+srv://pankajsaini:spankaj@cluster0.6j087.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+    "DB_NAME": "ticket_classification",
+    "API_KEY": "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",
+    "required_collections": ["tickets", "training_logs", "classified_tickets"]
+}
