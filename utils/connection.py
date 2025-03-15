@@ -2,7 +2,7 @@ import os
 from pymongo import MongoClient
 
 MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")  
-DB_NAME = os.getenv("DB_NAME", "support_tickets")  
+DB_NAME = os.getenv("DB_NAME", "ticket_classification")  
 
 # Required collections can be passed as a comma-separated list
 REQUIRED_COLLECTIONS = os.getenv("REQUIRED_COLLECTIONS", "").split(",")
