@@ -5,10 +5,10 @@ from services.database import get_mongo_collection
 from utils.clustering import cluster_tickets
 from utils.embeddings import generate_embedding  # Assuming this function generates vector embeddings
 from fastapi.responses import JSONResponse
+import os
 
 # Load config
-with open("config.json", "r") as f:
-    config = json.load(f)
+API_KEY = os.getenv("API_KEY", "")  
 
 
 async def train_with_chatgpt(tickets, logger):
