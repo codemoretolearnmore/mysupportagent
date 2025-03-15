@@ -1,13 +1,11 @@
 import json
 from fastapi.responses import JSONResponse
-from bson import ObjectId
 import pickle
 from utils.connection import get_mongo_collection
 import numpy as np
 from utils.embeddings import generate_embedding
 from services.similar_ticket import get_most_similar_tickets
 from datetime import datetime, timezone
-from bson import ObjectId
 
 # Load config
 with open("config.json", "r") as f:
