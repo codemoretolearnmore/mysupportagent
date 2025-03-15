@@ -109,13 +109,18 @@ async def websocket_classification(websocket: WebSocket, job_id: str):
             # Periodically check classification status
             response = await checkClassificationTaskStatus(logger, job_id)
 
-            if response and response["status"] == "COMPLETED":
+            if response and response["status"]=='COMPLETED':
                 results = await getClassificationResults(job_id, logger)
 
                 # Send classified tickets once the job is complete
                 await websocket.send_json({"message": "Classification Completed", "classified_tickets": results})
                 break  # Exit loop after sending data
-            
+            elif response and response["status"]=='FAILED':
+                await websocket.send_json({"message": "Classification FAILED", "classified_tickets": []})
+                break  # Exit loop after sending data
+            elif response is None:
+                await websocket.send_json({"message": "No Classification Job Found", "classified_tickets": []})
+                break
             await asyncio.sleep(5)  # Check status every 5 seconds
 
     except WebSocketDisconnect:
