@@ -10,10 +10,9 @@ numpy
 scikit-learn
 aiofiles
 sentence-transformers
-pymongo
+pymongo[srv]
 uuid
 datetime
 torchvision
 openai
 typing
-bson
