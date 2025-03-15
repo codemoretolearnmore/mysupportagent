@@ -13,7 +13,6 @@ sentence-transformers
 pymongo
 uuid
 datetime
-bson
 torchvision
 openai
 typing
