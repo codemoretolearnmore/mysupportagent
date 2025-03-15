@@ -4,7 +4,7 @@ from fastapi.responses import JSONResponse
 from services.ticket_classification import classify_tickets
 from services.train_with_chatgpt import train_with_chatgpt
 from services.model_training import train_model
-import utils.connection as connection
+# import utils.connection as connection
 import asyncio
 from services.database import createClassificationJob, checkClassificationTaskStatus, getClassificationResults, updateCategoryClassification
 import json
