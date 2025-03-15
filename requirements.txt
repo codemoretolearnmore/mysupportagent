@@ -9,3 +9,14 @@ motor
 numpy
 scikit-learn
 aiofiles
+sentence-transformers
+pymongo
+sklearn
+hashlib
+uuid
+datetime
+bson
+pickle
+torchvision
+openai
+typing
