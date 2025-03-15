@@ -1,6 +1,11 @@
 fastapi
 uvicorn
-openai
-pymongo
+pydantic
+python-multipart
+websockets
+asyncio
+logging
+motor
 numpy
 scikit-learn
+aiofiles
