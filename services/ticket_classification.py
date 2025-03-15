@@ -7,10 +7,6 @@ from utils.embeddings import generate_embedding
 from services.similar_ticket import get_most_similar_tickets
 from datetime import datetime, timezone
 
-# Load config
-with open("config.json", "r") as f:
-    config = json.load(f)
-
 
 tickets_collection = get_mongo_collection("tickets")
 jobs_collection = get_mongo_collection("jobs")
