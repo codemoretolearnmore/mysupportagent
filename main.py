@@ -42,6 +42,10 @@ async def root(request:Request):
     logger.info("Request to Index Server Received")
     return {"message": "Server is running!"}
 
+@app.get("/test-cors")
+async def test_cors():
+    return {"message": "CORS is working!"}
+
 class Ticket(BaseModel):
     ticket_id: int
     description: str
