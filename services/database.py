@@ -1,7 +1,7 @@
 from utils.connection import get_mongo_collection
 from uuid import uuid4
 from datetime import datetime, timezone
-from pymongo.bson import ObjectId
+from bson import ObjectId
 
 def save_tickets(tickets):
     """Save multiple tickets to MongoDB."""
