@@ -1,7 +1,6 @@
 from fastapi import FastAPI, UploadFile, File, Request, BackgroundTasks, HTTPException, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
-import uvicorn
 
 origins = [
     "http://localhost:3000",  # Allow frontend during development
