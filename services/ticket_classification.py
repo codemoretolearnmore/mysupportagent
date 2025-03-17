@@ -1,6 +1,6 @@
 import json
 from fastapi.responses import JSONResponse
-import pickle
+import joblib
 from utils.connection import get_mongo_collection
 import numpy as np
 from utils.embeddings import generate_embedding
@@ -88,7 +88,7 @@ async def classify_ticket(vector_embedding, stored_tickets):
     threshold=0.9
     try:
         with open("models/trained_model.pkl", "rb") as f:
-            model = pickle.load(f)
+            model = joblib.load(f)
 
         # Get predicted category
         # look for similar tickets first
