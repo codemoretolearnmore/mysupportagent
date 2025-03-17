@@ -71,7 +71,7 @@ async def classify_tickets(job_id, tickets, logger):
             
             return JSONResponse(
                 status_code="200",
-                content={"message":"tickets classified", "classified_tickets":[]}
+                content={"message":"No Ticket Classified", "classified_tickets":[]}
             )
     except Exception as e:
         logger.error("Error occured in ticket classification" + str(e))
