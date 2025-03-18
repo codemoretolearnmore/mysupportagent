@@ -184,6 +184,4 @@ async def train(request:Request):
     logger = get_logger(request)
     logger.info("Request to train model received")
     return train_model(logger)
-if __name__ == "__main__":
-    print("🚀 Server is starting on http://0.0.0.0:8000 ...")
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+
