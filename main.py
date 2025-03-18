@@ -20,6 +20,7 @@ origins = [
     "http://127.0.0.1:3000",  # If accessing via 127.0.0.1
     "https://57d4f66815ed1b.lhr.life/",
     "https://b48756720d6678.lhr.life",
+    "https://mysupportagent-frontend.vercel.app/upload",
     "https://mysupportagent-frontend-production.up.railway.app"  # Add your production frontend domain here
 ]
 
